@@ -6,7 +6,7 @@ RUN apt update && \
     apt -y install software-properties-common && \
     apt -y install python3 python3-cs python3-sshpubkeys python3-boto python3-boto3 python3-pip && \
     apt-get clean all && \
-    python3 -m pip install ansible && \
+    pip3 install --no-cache-dir --no-compile ansible && \
     rm -rf /var/lib/apt/lists/*;
 
 WORKDIR /ansible/
